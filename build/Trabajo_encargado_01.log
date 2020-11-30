@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.14)  30 NOV 2020 17:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.14)  30 NOV 2020 17:53
 entering extended mode
 **d:/Escritorio/upt/base_de_datos_2/2/trabajos/Trabajo_encargado_01/Trabajo_encargado_01.tex
 (d:/Escritorio/upt/base_de_datos_2/2/trabajos/Trabajo_encargado_01/Trabajo_encargado_01.tex
@@ -424,10 +424,15 @@ l.302
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.302 
-       <./img/04_g2.png> <./img/05_g3.png> <./img/06_g4.png> <./img/07_g5.png>] [7pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+       <./img/04_g2.png> <./img/05_g3.png> <./img/06_g4.png> <./img/07_g5.png>]
+Underfull \hbox (badness 5403) in paragraph at lines 305--306
+[]\OT1/phv/m/n/10 Como se ha visto en la com-paraci[]on de
+ []
+
+[7pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.315 \end{document}
+l.317 \end{document}
                     
 
  <./img/08_g6.png>] (d:/Escritorio\upt\base_de_datos_2\2\trabajos\Trabajo_encargado_01\build\Trabajo_encargado_01.aux
@@ -448,7 +453,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  60i,10n,66p,569b,401s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/AbrahamLIPACALABILLA/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/AbrahamLIPACALABILLA/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/AbrahamLIPACALABILLA/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/AbrahamLIPACALABILLA/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/AbrahamLIPACALABILLA/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on d:/Escritorio\upt\base_de_datos_2\2\trabajos\Trabajo_encargado_01\build\Trabajo_encargado_01.pdf (7 pages, 400134 bytes).
+Output written on d:/Escritorio\upt\base_de_datos_2\2\trabajos\Trabajo_encargado_01\build\Trabajo_encargado_01.pdf (7 pages, 400940 bytes).
 PDF statistics:
  185 PDF objects out of 1000 (max. 8388607)
  45 named destinations out of 1000 (max. 500000)
