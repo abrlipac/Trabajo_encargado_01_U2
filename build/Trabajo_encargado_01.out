@@ -1,0 +1,20 @@
+\BOOKMARK [1][-]{section.1}{Introducci\363n}{}% 1
+\BOOKMARK [1][-]{section.2}{Bases de datos}{}% 2
+\BOOKMARK [1][-]{section.3}{Bases de datos no relacionales}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Tipos de bases de datos NoSQL}{section.3}% 4
+\BOOKMARK [1][-]{section.4}{MongoDB}{}% 5
+\BOOKMARK [2][-]{subsection.4.1}{RDBMS y MongoDB}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.2}{Ventajas sobre RDBMS}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.3}{Arquitectura}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.4}{BSON}{section.4}% 9
+\BOOKMARK [3][-]{subsubsection.4.4.1}{JSON y BSON}{subsection.4.4}% 10
+\BOOKMARK [1][-]{section.5}{Redis}{}% 11
+\BOOKMARK [2][-]{subsection.5.1}{Estructura}{section.5}% 12
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Bases de datos}{subsection.5.1}% 13
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Clave / Valor}{subsection.5.1}% 14
+\BOOKMARK [2][-]{subsection.5.2}{Almacenamiento de estructuras de datos}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.3}{Arquitectura}{section.5}% 16
+\BOOKMARK [1][-]{section.6}{Rendimiento}{}% 17
+\BOOKMARK [1][-]{section.7}{Conclusiones}{}% 18
+\BOOKMARK [1][-]{section.8}{Recomendaciones}{}% 19
+\BOOKMARK [1][-]{section.9}{Bibliograf\355a}{}% 20
