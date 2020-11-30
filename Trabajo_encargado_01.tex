@@ -6,6 +6,7 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage[english,spanish]{babel} 
 \usepackage{helvet}
+\usepackage{float}
 
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -15,20 +16,36 @@
 
 \begin{document}
 
-\title{Comparativa de gestores de bases de datos no relacionales}
-\author{Lipa Calabilla, Abraham}
+\title{\Huge Comparativa de gestores de bases de datos no relacionales}
+\author{
+  Mejía Rodriguez, Julio Oliver\\
+  \texttt{(2010037899)}
+  \and
+  Paredes Catacora, Randi Angel\\
+  \texttt{(2013047246)}
+  \and
+  Herrera Amezquita, Derian Francisco\\
+  \texttt{(2017059489)}
+  \and
+  Lipa Calabilla, Abraham\\
+  \texttt{(2019064039)}
+}
 \date{30 de Noviembre de 2020}
 
 \maketitle
 
 \selectlanguage{spanish}
 \begin{poliabstract}{Resumen} 
-  
+  En el mundo de las bases de datos, es importante conocer las diferentes alternativas que están disponibles para tomar la mejor decisión de acuerdo al problema que queremos dar solución. Uno de los puntos de discusión más importantes es el del rendimiento, facilidad de uso y la durabilidad del gestor de base de datos.
+
+  En el presente trabajo se van a ver las características más importantes de los gestores de bases de datos no relacionales MongoDB y Redis, siendo estos los más populares. Veremos una comparación de sus características en común y los puntos en los que cada uno destaca más. Se van a comparar en rendimiento, facilidad de uso y la durabilidad del gestor de base de datos. Finalmente vamos a determinar los casos de uso de estos dos gestores de bases de datos.
 \end{poliabstract}
 
 \selectlanguage{english}
 \begin{poliabstract}{Abstract} 
-  
+  In the world of databases, it is important to know the different alternatives that are available to make the best decision according to the problem we want to solve. One of the most important talking points is the performance, ease of use, and durability of the database manager.
+
+  In this work, the most important characteristics of the non-relational database managers MongoDB and Redis will be seen, these being the most popular. We will see a comparison of their common characteristics and the points in which each one stands out the most. They will be compared in performance, ease of use and the durability of the database manager. Finally we are going to determine the use cases of these two database managers.
 \end{poliabstract}
 
 \section{Introducción}
@@ -232,7 +249,7 @@ La arquitectura de Redis está basada en el enfoque BASE (Disponible básicament
   \caption{Arquitectura de una base de datos Redis}
 \end{figure}
 
-\section{Rendimiento}
+\section{Comparación}
 
 Para la comparación de rendimiento entre MongoDB y Redis, se ha realizado un proceso de benchmarking en una sola máquina (con las mismas características). La herramienta utilizada es YCSB (Yahoo Cloud Serving Benchmark).
 
@@ -243,21 +260,44 @@ Versiones de las bases de datos:
   \item[Redis] 2.8.15
 \end{description}
 
+\subsection{Rendimiento}
+
 Se muestran los datos correspondientes a la relación entre el número de hilos de la máquina (los cuales son 1, 2, 4 y 8) y las operaciones por segundo, dada cierta cantidad de registros (1000, 5000 y 10000) y 1000 operaciones realizadas.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \includegraphics[width = \columnwidth]{img/03_g1.png}
   \caption{Gráfico comparativo con 1000 registros y 1000 operaciones}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \includegraphics[width = \columnwidth]{img/04_g2.png}
   \caption{Gráfico comparativo con 5000 registros y 1000 operaciones}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \includegraphics[width = \columnwidth]{img/05_g3.png}
   \caption{Gráfico comparativo con 10000 registros y 1000 operaciones}
+\end{figure}
+
+\subsection{Latencia y rendimiento}
+
+Se muestran los datos correspondientes a la relación entre el número de hilos de la máquina (los cuales van desde 1 a 50) y la latencia en microsegundos, dados 100000 registros.
+
+\begin{figure}[H]
+  \includegraphics[width = \columnwidth]{img/06_g4.png}
+  \caption{Latencia de lectura}
+\end{figure}
+
+\begin{figure}[H]
+  \includegraphics[width = \columnwidth]{img/07_g5.png}
+  \caption{Latencia de actualización}
+\end{figure}
+
+Se muestran los datos correspondientes a la relación entre el número de hilos de la máquina (los cuales van desde 1 a 50) y las operaciones por segundo, dados 100000 registros.
+
+\begin{figure}[H]
+  \includegraphics[width = \columnwidth]{img/08_g6.png}
+  \caption{Rendimiento con 100000 registros}
 \end{figure}
 
 \section{Conclusiones}
