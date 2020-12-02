@@ -6,7 +6,6 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage[english,spanish]{babel} 
 \usepackage{helvet}
-\usepackage{float}
 
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -16,39 +15,63 @@
 
 \begin{document}
 
-\title{\Huge Comparativa de gestores de bases de datos no relacionales}
-\author{
-  Mejía Rodriguez, Julio Oliver\\
-  \texttt{(2010037899)}
-  \and
-  Paredes Catacora, Randi Angel\\
-  \texttt{(2013047246)}
-  \and
-  Herrera Amezquita, Derian Francisco\\
-  \texttt{(2017059489)}
-  \and
-  Lipa Calabilla, Abraham\\
-  \texttt{(2019064039)}
-}
+\title{Comparativa de gestores de bases de datos no relacionales}
+\author{Lipa Calabilla, Abraham\\Herrera Amezquita,
+Derian  \\Paredes Catacora, Randi \\Mejia Rodriguez, Julio}
+
+
 \date{30 de Noviembre de 2020}
 
 \maketitle
 
 \selectlanguage{spanish}
 \begin{poliabstract}{Resumen} 
-  En el mundo de las bases de datos, es importante conocer las diferentes alternativas que están disponibles para tomar la mejor decisión de acuerdo al problema que queremos dar solución. Uno de los puntos de discusión más importantes es el del rendimiento, facilidad de uso y la durabilidad del gestor de base de datos.
+  Como su propio nombre indica, las bases de datos no 
+  relacionales son las que, a diferencia de las relacionales,
+   no tienen un identificador que sirva de relación entre un 
+   conjunto de datos y otros. Como veremos, la información
+    se organiza normalmente mediante documentos y es muy
+     útil cuando no tenemos un esquema exacto de lo que se va a almacenar.
 
-  En el presente trabajo se van a ver las características más importantes de los gestores de bases de datos no relacionales MongoDB y Redis, siendo estos los más populares. Veremos una comparación de sus características en común y los puntos en los que cada uno destaca más. Se van a comparar en rendimiento, facilidad de uso y la durabilidad del gestor de base de datos. Finalmente vamos a determinar los casos de uso de estos dos gestores de bases de datos.
+     Las bases de datos NoSQL están diseñadas específicamente
+     para modelos de datos específicos y tienen esquemas flexibles 
+     para crear aplicaciones modernas. Las bases de datos NoSQL son 
+     ampliamente reconocidas porque son fáciles de desarrollar, por 
+     su funcionalidad y el rendimiento a escala.
+  
 \end{poliabstract}
 
 \selectlanguage{english}
 \begin{poliabstract}{Abstract} 
-  In the world of databases, it is important to know the different alternatives that are available to make the best decision according to the problem we want to solve. One of the most important talking points is the performance, ease of use, and durability of the database manager.
+  As the name suggests, databases do not
+  relational are those that, unlike relational,
+   do not have an identifier that serves as a relationship between a
+   data set and others. As we will see, the information
+    is normally organized by documents and is very
+     useful when we do not have an exact schematic of what to store.
 
-  In this work, the most important characteristics of the non-relational database managers MongoDB and Redis will be seen, these being the most popular. We will see a comparison of their common characteristics and the points in which each one stands out the most. They will be compared in performance, ease of use and the durability of the database manager. Finally we are going to determine the use cases of these two database managers.
+     NoSQL databases are specifically designed
+     for specific data models and have flexible schemas
+     to create modern applications. NoSQL databases are
+     widely recognized because they are easy to develop, for
+     its functionality and performance at scale.
 \end{poliabstract}
 
 \section{Introducción}
+Las bases de datos relacionales dominaron el 
+mundo de la gestión de datos desde la década de los 
+70, pero al surgir el  Internet y su auge como 
+plataforma del desarrollo de aplicaciones pusieron a prueba  el dominio de las 
+soluciones relacionales.
+
+El volumen de datos al que debe hacer frente una aplicación web 
+ha crecido exponencialmente durante los últimos años, así como el 
+número de usuarios que utiliza las aplicaciones 
+disponibles en Internet, y en consecuencia el volumen de transacciones 
+y la demanda a la que se ven sometidas, ya que los usuarios esperan un
+ tiempo de respuesta inmediato en sus interacciones online con el website.
+ En el presente trabajo desarrollaremos mas a fondo los distintos temas
+ acerca de las bases de datos no relacionales.
 
 
 \section{Bases de datos}
@@ -89,16 +112,27 @@ Una base de datos no relacional (o bases de datos NoSQL) responde a las necesida
 \begin{enumerate}
 
   \item Clave/Valor \\
-        Los datos usan claves que son identificadores y que son similares a una llave primaria en una base de datos relacional. [3] Cada elemento de la base de datos se almacena como un nombre de atributo (o clave), junto con su valor. [4] Algunos ejemplos de este tipo son \textbf{Riak } y \textbf{Berkeley DB}.
+        Los datos usan claves que son identificadores y que son similares a una llave primaria en una
+         base de datos relacional. [3] Cada elemento de la base de datos se almacena como un nombre
+          de atributo (o clave), junto con su valor. [4] Algunos ejemplos de este tipo son \textbf{Riak } y \textbf{Berkeley DB}.
 
   \item Orientadas a columnas \\
-        Los datos se organizan por columnas en lugar de por filas. El efecto de este diseño arquitectónico es que hace que las consultas agregadas sobre grandes cantidades de datos sean mucho más rápidas de procesar. [3] Algunos ejemplos de este tipo son \textbf{Cassandra} y \textbf{HBase}.
+        Los datos se organizan por columnas en lugar de por filas. 
+        El efecto de este diseño arquitectónico es que hace que las
+         consultas agregadas sobre grandes cantidades de datos sean mucho más
+          rápidas de procesar. [3] Algunos ejemplos de este tipo son \textbf{Cassandra} y \textbf{HBase}.
 
   \item Documentos \\
-        Se empareja cada clave con una estructura de datos compleja que se denomina `documento'. Los documentos pueden contener muchos pares de clave-valor distintos, o pares de clave-matriz, o incluso documentos anidados. [4] Un ejemplo de este tipo es \textbf{MongoDB}.
+        Se empareja cada clave con una estructura de datos
+         compleja que se denomina `documento'. Los documentos 
+         pueden contener muchos pares de clave-valor distintos, 
+         o pares de clave-matriz, o incluso documentos anidados. [4] Un ejemplo de este tipo es \textbf{MongoDB}.
 
   \item Grafos \\
-        Utilizan la teoría de grafos para almacenar relaciones de datos en una serie de vértices con aristas, lo que hace que las consultas que funcionen con datos de esta manera sean mucho más rápidas. [3] Algunos ejemplos de este tipo son \textbf{Neo4J} y \textbf{Giraph}.
+        Utilizan la teoría de grafos para almacenar relaciones 
+        de datos en una serie de vértices con aristas, lo que 
+        hace que las consultas que funcionen con datos de esta 
+        manera sean mucho más rápidas. [3] Algunos ejemplos de este tipo son \textbf{Neo4J} y \textbf{Giraph}.
 
 \end{enumerate}
 
@@ -169,33 +203,63 @@ JSON proporciona únicamente 6 tipos de datos: [5]
 
 \begin{itemize}
   \item String
+    \\ Este tipo de dato lo compone una cadena de texto normal.
   \item Number
+    \\Este tipo de dato lo compone un número par o impar, se declara sin comillas dobles.
   \item Booleans
+    \\Este tipo de dato es utilizado como una opción de tipo true o false.
   \item null
+    \\Sencillamente este dato es para dejar en blanco los valores de un dato.
   \item Arrays
+      \\Este tipo de datos es para crear un nuevo subconjunto de datos independientes dentro del JSON.  
   \item Objetos / documentos
+      \\Un archivo JSON puede tener objetos, es decir una nueva fila que dentro de ella hay un conjunto de datos específicos.
 \end{itemize}
 
 Los tipos de datos que maneja internamente BSON son los siguientes:
 
 \begin{itemize}
   \item Double
+  \\Representa un valor flotante.
   \item String
+  \\Las cadenas BSON son UTF-8. En general,
+   los controladores para cada lenguaje de 
+   programación se convierten del formato de 
+   cadena del lenguaje a UTF-8 al serializar y 
+   deserializar BSON. Esto hace posible almacenar 
+   la mayoría de los caracteres internacionales en cadenas 
+   BSON con facilidad.
+
   \item Object
+  \\Representa un documento incrustado.
   \item Array
+  \\Los conjuntos o listas de valores se pueden representar como matrices.
   \item Binary data
+  \\Los datos binarios son una cadena de bytes arbitrarios, no se pueden manipular desde el shell.
   \item Undefined (deprecated)
   \item Object id
+  \\Los ObjectIds (identificador de documento MongoDB, equivalente a una clave principal) son: pequeños, probablemente únicos, rápidos de generar y ordenados. Estos valores constan de 12 bytes, donde los primeros cuatro bytes son una marca de tiempo que refleja la creación del ObjectId.
+  
   \item Boolean
+ \\ Un verdadero o falso lógico. Se usa para evaluar si una condición es verdadera o falsa
   \item Date
+ \\ BSON Date es un entero de 64 bits que representa el número de milisegundos desde la época de Unix (1 de enero de 1970).
   \item Null
+  \\Representa tanto un valor nulo como un campo inexistente.
   \item Regular Expression
+  
   \item JavaScript Symbol JavaScript (con scope)
+  
   \item 32-bit integer
+  \\Los números sin puntos decimales se guardarán como enteros de 32 bits.
   \item Timestamp
+  \\BSON tiene un tipo de marca de tiempo especial para el uso interno de MongoDB y no está asociado con el tipo de fecha normal.
   \item 64-bit integer
+  \\Los números sin punto decimal se guardarán y se devolverán como enteros de 64 bits.
   \item Min key
+  \\MinKey compara menos que todos los demás valores posibles de elementos BSON, respectivamente, y existen principalmente para uso interno.
   \item Max key
+  \\MaxKey compara más que todos los demás valores posibles de elementos BSON, respectivamente, y existen principalmente para uso interno.s
 \end{itemize}
 
 \section{Redis}
@@ -225,13 +289,21 @@ Las estructuras de datos soportadas que se incluyen: [3]
 
 \begin{itemize}
   \item Strings
+  \\En Redis un string es una secuencia de bytes, lo que nos permite almacenar cualquier dato, como cadenas de texto, números, imágenes, vídeos, o un objeto serializado.
   \item Lists
+  \\Las listas permiten almacenar secuencias de strings en el orden en el que fueron insertadas. En Redis las listas están optimizadas para que añadir un elemento al inicio o al final de la lista tarde lo mismo independientemente de si la lista tiene 10 elementos, o 100 millones de elementos.
   \item Sets
+  \\Los sets son colecciones de strings, sin ningún orden particular, en los que se garantiza que los elementos del mismo son únicos y no pueden estar duplicados. Podemos añadir el mismo elemento 10 veces, pero Redis garantiza que sólo existirá una vez, lo que nos permite poder añadir elementos sin tener que preocuparnos previamente de si ya existen o no.
   \item Sorted sets
+ \\Permiten la ordenación de los elementos en base a un valor (score) numérico asociado a cada uno de ellos. Es importante aclarar que la unicidad de los elementos se hace sólo teniendo en cuenta los datos almacenados, y no el valor del score. Si se añade el mismo elemento varias veces con distintos valores del score, el elemento sólo existirá un vez, y el score será el de la última actualización.
   \item Hashes
+  \\Permite asociar a una clave una colección de pares clave-valor, habitualmente usado para representar objetos.
   \item Bit arrays
+  
   \item Streams
+  
   \item HyperLogLogs
+\\Es una estructura de datos probabilística que se utiliza para contar valores únicos, o como se le conoce en matemáticas: calcular la cardinalidad de un conjunto.
 \end{itemize}
 
 \subsection{Arquitectura}
@@ -249,7 +321,7 @@ La arquitectura de Redis está basada en el enfoque BASE (Disponible básicament
   \caption{Arquitectura de una base de datos Redis}
 \end{figure}
 
-\section{Comparación}
+\section{Rendimiento}
 
 Para la comparación de rendimiento entre MongoDB y Redis, se ha realizado un proceso de benchmarking en una sola máquina (con las mismas características). La herramienta utilizada es YCSB (Yahoo Cloud Serving Benchmark).
 
@@ -260,58 +332,92 @@ Versiones de las bases de datos:
   \item[Redis] 2.8.15
 \end{description}
 
-\subsection{Rendimiento}
-
 Se muestran los datos correspondientes a la relación entre el número de hilos de la máquina (los cuales son 1, 2, 4 y 8) y las operaciones por segundo, dada cierta cantidad de registros (1000, 5000 y 10000) y 1000 operaciones realizadas.
 
-\begin{figure}[H]
+\begin{figure}[h]
   \includegraphics[width = \columnwidth]{img/03_g1.png}
   \caption{Gráfico comparativo con 1000 registros y 1000 operaciones}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h]
   \includegraphics[width = \columnwidth]{img/04_g2.png}
   \caption{Gráfico comparativo con 5000 registros y 1000 operaciones}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h]
   \includegraphics[width = \columnwidth]{img/05_g3.png}
   \caption{Gráfico comparativo con 10000 registros y 1000 operaciones}
 \end{figure}
 
-\subsection{Latencia y rendimiento}
-
-Se muestran los datos correspondientes a la relación entre el número de hilos de la máquina (los cuales van desde 1 a 50) y la latencia en microsegundos, dados 100000 registros.
-
-\begin{figure}[H]
-  \includegraphics[width = \columnwidth]{img/06_g4.png}
-  \caption{Latencia de lectura}
-\end{figure}
-
-\begin{figure}[H]
-  \includegraphics[width = \columnwidth]{img/07_g5.png}
-  \caption{Latencia de actualización}
-\end{figure}
-
-Se muestran los datos correspondientes a la relación entre el número de hilos de la máquina (los cuales van desde 1 a 50) y las operaciones por segundo, dados 100000 registros.
-
-\begin{figure}[H]
-  \includegraphics[width = \columnwidth]{img/08_g6.png}
-  \caption{Rendimiento con 100000 registros}
-\end{figure}
-
+\newpage
 \section{Conclusiones}
+A partir de la definición, requisitos, ventajas 
+y características de la base de datos no relacionales, podemos 
+conocer algunos aspectos dignos de atención, entre ellos
+ podemos decir que la base de datos: una base de datos es 
+ un conjunto de datos o información que se utiliza para brindar servicios para muchas aplicaciones al mismo tiempo. En cuanto a los requisitos, se puede decir que ha realizado las mismas tareas de análisis que el software, y tiene las características de asociar información en organizaciones y asociaciones La ventaja de la base de datos es que la plataforma se puede utilizar para desarrollar aplicaciones. organización. Otro aspecto importante es el diseño y creación de la base de datos, existen muchas formas de organizar la información y expresar la relación entre los datos, los tres modelos lógicos principales en la base de datos son jerárquico, de red y relacional. Tiene ciertas ventajas comerciales y de procesamiento.
 
-Como se ha visto en la comparación de rendimiento, Redis tiene una gran ventaja en la acceso a los datos debido a que ofrece replicación de datos en memoria. También a las estructuras de datos que son muy simples. En cambio, MongoDB de cierta forma puede llegar a tener estructuras mucho más complejas, sin considerar la cantidad de estructuras de datos incluidos en BSON.
-
-En el apartado de facilidad de uso, hemos visto que MongoDB usa una sintaxis similar a Javascript en el lenguaje de consultas, lo cual puede resultar familiar para los desarrolladores web Frontend o Backend (que hacen uso de Node). En cambio, Redis usa una sintaxis similar a bash con la ejecución de comandos que pueden argumentos separados por espacios.
 
 \section{Recomendaciones}
+
+La elección de la tecnología de almacenamiento
+ adecuada implica muchas consideraciones. Aunque 
+ el rendimiento suele ser el factor más importante,
+  se deben considerar factores como la funcionalidad, 
+  la facilidad de operación, la facilidad de uso, la 
+  disponibilidad de profesionales conocedores, la seguridad 
+  y otros factores (como la existencia de herramientas y las 
+  comunidades que respaldan el producto).
+   Gracias a los beneficios como el aumento de 
+   la productividad del equipo de desarrollo, la capacidad 
+   de ingresar al mercado antes y reducir el costo total de
+    propiedad, vemos cómo la tecnología NoSQL se convierte 
+    cada vez más en parte de las soluciones de proyectos 
+    comerciales.
+    Es importante tener en cuenta que, como dice el nombre "NoSQL", no solo SQL
+     ("no solo SQL"), las tecnologías NoSQL no son necesariamente la única parte 
+     del almacenamiento de datos de la solución, pero a menudo acompañan a las bases
+      de datos SQL, incluso si siguen siendo seguras en el futuro Úselo, incluso en 
+      combinación con otras bases de datos NoSQL.
+      Con el reciente crecimiento explosivo de las arquitecturas
+       basadas en microservicios, veremos cada vez más cómo cada 
+       servicio encapsula su propia solución de gestión de datos y, 
+       en la mayoría de los casos, utiliza ciertas tecnologías NoSQL disponibles.
 
 
 
 \section{Bibliografía}
 
+\begin{thebibliography}{X}
+  \bibitem{Baz} \textsc{Garcia\-Molina, H., Ullman, J., \& Widom, J. } ,
+  \textit{}(2008),Database Systems: The Complete Book (2.a ed.). Pearson.
+  
+  \bibitem{Baz} \textsc{Punia, Y., \& Aggarwal, R. } ,
+  \textit{}(2014),Implementing Information System Using MongoDB and Redis. International Journal of Advanced Trends in Computer Science and Engineering,3(2), 16-20.
+  
+  \bibitem{Baz} \textsc{John Wiley \& Sons, Inc.  } ,
+  \textit{}(2019),Redis For Dummies(Limited Edition) [Libro electrónico]. John Wiley \& Sons, Inc. \url{https://redislabs.com/redis-for-dummies/}
+
+  \bibitem{Baz} \textsc{MongoDB. (s. f.).} ,
+  \textit{}Explicación sobre las bases de datos NoSQL. Recuperado 1 de diciembre de 2020, de:\url{https://www.mongodb.com/es/nosql-explained}
+
+  \bibitem{Baz} \textsc{Madrigal Marinas, J. M. M. } ,
+  \textit{}(2020), MongoDB en Castellano (2020.a-07-13 ed. ed.) [Libro electrónico]. Leanpub. \url{https://leanpub.com/mongodbcastellano}
+
+  \bibitem{Baz} \textsc{Tutorials Point (I) Pvt. Ltd.} ,
+  \textit{}(2018),MongoDB Tutorial. Tutorials Point (I) Pvt. Ltd. \url{https://www.tutorialspoint.com/mongodb/mongodb_tutorial.pdf}
+
+  \bibitem{Baz} \textsc{Karl Seguin, K. S. } ,
+  \textit{}(2020),The Little Redis Book (1.a ed.) [Libro electrónico]. Github. \url{https://github.com/karlseguin/the-little-redis-book}
+
+  \bibitem{Baz} \textsc{Kumarasinghe, C. U., Liyanage, K. L. D. U., Madushanka, W. A. T., \& Mendis, R. A. C. L. } ,
+  \textit{}(2016),Performance Comparison of NoSQL Databases in Pseudo Distributed Mode: Cassandra, MongoDB \& Redis.
+
+\newpage
+  \bibitem{Baz} \textsc{GoalKicker.com.  } ,
+  \textit{}(2017),MongoDB Notes for Professionals (3.6.1 ed.) [Libro electrónico]. GoalKicker.com. \url{https://goalkicker.com/MongoDBBook/MongoDBNotesForProfessionals.pdf}
+
+\end{thebibliography}
 
 
 \end{document}
